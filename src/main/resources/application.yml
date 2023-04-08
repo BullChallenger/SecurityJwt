@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    include: jwt
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:33060/jwt_test?useUnicode=true&serverTimezone=Asia/Seoul
+    username: root
+    password: test1234
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show-sql: true
+        format_sql: true
